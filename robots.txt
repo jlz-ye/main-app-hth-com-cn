@@ -1,0 +1,3 @@
+User-agent: *
+Allow: /
+Sitemap: https://jlz-ye.github.io/main-app-hth-com-cn/sitemap.xml

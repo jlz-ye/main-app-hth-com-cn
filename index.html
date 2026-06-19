@@ -1,0 +1,345 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>华体会 · 简明指南与访问提醒</title>
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        body {
+            background-color: #f9fafb;
+            font-family: system-ui, -apple-system, 'Segoe UI', Roboto, 'Helvetica Neue', sans-serif;
+            line-height: 1.7;
+            color: #1e293b;
+            padding: 0 1.5rem;
+        }
+
+        .page-wrapper {
+            max-width: 760px;
+            margin: 0 auto;
+            padding: 2rem 0 4rem;
+        }
+
+        /* ---- 导航 ---- */
+        .navbar {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            padding: 0.8rem 0 1.2rem;
+            border-bottom: 1px solid #e2e8f0;
+            margin-bottom: 2.5rem;
+            flex-wrap: wrap;
+            gap: 0.5rem;
+        }
+
+        .navbar-brand {
+            font-weight: 600;
+            font-size: 1.2rem;
+            letter-spacing: 0.5px;
+            color: #0f172a;
+            background: #eef2ff;
+            padding: 0.2rem 0.8rem;
+            border-radius: 24px;
+        }
+
+        .navbar-links {
+            display: flex;
+            gap: 2rem;
+            font-size: 0.95rem;
+        }
+
+        .navbar-links a {
+            text-decoration: none;
+            color: #475569;
+            transition: color 0.15s;
+        }
+
+        .navbar-links a:hover {
+            color: #2563eb;
+        }
+
+        /* ---- 通用 ---- */
+        h1 {
+            font-size: 2.2rem;
+            font-weight: 600;
+            letter-spacing: -0.01em;
+            line-height: 1.2;
+            margin-bottom: 0.75rem;
+            color: #0b1e33;
+        }
+
+        h2 {
+            font-size: 1.5rem;
+            font-weight: 500;
+            margin: 2.5rem 0 0.75rem;
+            color: #1e293b;
+            letter-spacing: -0.01em;
+        }
+
+        h3 {
+            font-size: 1.1rem;
+            font-weight: 500;
+            margin-bottom: 0.4rem;
+            color: #1e293b;
+        }
+
+        p {
+            margin-bottom: 1.2rem;
+            color: #334155;
+        }
+
+        .subhead {
+            font-size: 1.05rem;
+            color: #64748b;
+            margin-bottom: 2rem;
+            border-left: 3px solid #94a3b8;
+            padding-left: 1rem;
+        }
+
+        hr {
+            border: none;
+            border-top: 1px solid #e9edf2;
+            margin: 2.8rem 0;
+        }
+
+        /* ---- 卡片场景模块 ---- */
+        .scene-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+            gap: 1.8rem;
+            margin: 1.5rem 0 2rem;
+        }
+
+        .scene-item {
+            background: #ffffff;
+            border-radius: 18px;
+            padding: 1.5rem 1.2rem;
+            box-shadow: 0 2px 8px rgba(0,0,0,0.02);
+            border: 1px solid #edf2f7;
+            transition: box-shadow 0.2s;
+        }
+
+        .scene-item:hover {
+            box-shadow: 0 6px 18px rgba(0,0,0,0.04);
+        }
+
+        .scene-item .emoji-bg {
+            display: inline-block;
+            font-size: 1.8rem;
+            margin-bottom: 0.6rem;
+        }
+
+        .scene-item p {
+            font-size: 0.95rem;
+            margin-bottom: 0;
+            color: #475569;
+        }
+
+        /* ---- 提醒/说明区块 ---- */
+        .notice-box {
+            background: #f1f5f9;
+            border-radius: 20px;
+            padding: 1.6rem 1.8rem;
+            margin: 2rem 0;
+            border-left: 5px solid #64748b;
+        }
+
+        .notice-box ul {
+            list-style: none;
+            padding-left: 0;
+            margin: 0.6rem 0;
+        }
+
+        .notice-box li {
+            padding: 0.4rem 0 0.4rem 1.5rem;
+            position: relative;
+            color: #1e293b;
+            font-size: 0.98rem;
+        }
+
+        .notice-box li::before {
+            content: "·";
+            position: absolute;
+            left: 0.2rem;
+            color: #475569;
+            font-weight: bold;
+        }
+
+        .faq-compact {
+            margin: 2rem 0 1.2rem;
+        }
+
+        .faq-item {
+            padding: 0.75rem 0;
+            border-bottom: 1px solid #e9edf4;
+        }
+
+        .faq-item:last-child {
+            border-bottom: none;
+        }
+
+        .faq-q {
+            font-weight: 500;
+            margin-bottom: 0.2rem;
+            color: #0f172a;
+        }
+
+        .faq-a {
+            font-size: 0.95rem;
+            color: #475569;
+        }
+
+        /* ---- 链接 ---- */
+        .inline-link {
+            color: #2563eb;
+            text-decoration: none;
+            border-bottom: 1px solid #b9d0fa;
+            transition: border-color 0.15s, color 0.15s;
+        }
+
+        .inline-link:hover {
+            color: #1d4ed8;
+            border-bottom-color: #2563eb;
+        }
+
+        /* ---- footer / 底部 ---- */
+        .footer-note {
+            margin-top: 3rem;
+            padding-top: 1.5rem;
+            border-top: 1px solid #e2e8f0;
+            font-size: 0.85rem;
+            color: #94a3b8;
+            text-align: center;
+        }
+
+        /* ---- 响应式 ---- */
+        @media (max-width: 640px) {
+            h1 {
+                font-size: 1.8rem;
+            }
+            .navbar {
+                flex-direction: column;
+                align-items: flex-start;
+            }
+            .navbar-links {
+                gap: 1.5rem;
+                flex-wrap: wrap;
+                margin-top: 0.2rem;
+            }
+            .scene-grid {
+                grid-template-columns: 1fr;
+                gap: 1.2rem;
+            }
+            .notice-box {
+                padding: 1.2rem;
+            }
+        }
+    </style>
+</head>
+<body>
+<div class="page-wrapper">
+
+    <!-- 导航 -->
+    <nav class="navbar">
+        <span class="navbar-brand">华体会·简明指南</span>
+        <div class="navbar-links">
+            <a href="#guide">指南</a>
+            <a href="#scenes">场景</a>
+            <a href="#faq">常见说明</a>
+        </div>
+    </nav>
+
+    <!-- Hero / 标题区域 -->
+    <section>
+        <h1>华体会<br>从使用到提醒</h1>
+        <div class="subhead">
+            一份轻量的日常指引，帮助你在不同情境下顺畅使用服务。
+        </div>
+        <p>
+            无论你是第一次接触，还是已经熟悉一段时间，保持对访问环境、信息准确性和操作习惯的留意，会让整个过程更省心。下面这份指南围绕三个常见场景展开，并在最后整理了几个经常被问到的问题。
+        </p>
+    </section>
+
+    <!-- 三个场景模块 -->
+    <section id="scenes">
+        <h2>三个常见场景</h2>
+        <div class="scene-grid">
+            <div class="scene-item">
+                <div class="emoji-bg">📱</div>
+                <h3>移动端快速访问</h3>
+                <p>通过手机浏览器直接使用，注意保持系统与浏览器为较新版本。建议在稳定网络下操作，避免因信号波动中断流程。</p>
+            </div>
+            <div class="scene-item">
+                <div class="emoji-bg">🖥️</div>
+                <h3>电脑端浏览</h3>
+                <p>大屏幕下信息展示更完整，适合需要同时对照多个页面或记录内容的情况。可提前关闭无关标签页以提升专注度。</p>
+            </div>
+            <div class="scene-item">
+                <div class="emoji-bg">🔐</div>
+                <h3>环境与安全提醒</h3>
+                <p>请通过可信渠道确认地址信息，注意核对域名。日常使用中留意浏览器地址栏的锁定图标，确保连接正常。</p>
+            </div>
+        </div>
+        <p style="margin-top: 0.5rem; font-size: 0.95rem; color: #64748b;">
+            以上场景覆盖了大多数人的使用习惯，实际体验可能因设备或网络而异，按需调整即可。
+        </p>
+    </section>
+
+    <!-- 简明指南 + 嵌入链接 -->
+    <section id="guide">
+        <h2>简明指南</h2>
+        <p>
+            在开始之前，建议先确认你使用的是最新版浏览器，并保持系统网络通畅。如果你需要直接访问服务，可以前往
+            <a href="https://main-app-hth.com.cn" class="inline-link">华体会</a>，
+            从这里可以进入主要界面。日常使用中如果遇到加载缓慢或提示异常，先检查本地网络和浏览器缓存往往能解决问题。
+        </p>
+        <p>
+            另外，留意官方渠道发布的说明或调整信息，能帮助你避开一些临时性的小状况。把常用页面加入书签也是个好习惯，既方便又能减少输错地址的可能。
+        </p>
+    </section>
+
+    <!-- 常见说明 / FAQ 摘要 -->
+    <section id="faq" class="faq-compact">
+        <h2>常见说明</h2>
+        <div class="faq-item">
+            <div class="faq-q">为什么有时候页面加载比较慢？</div>
+            <div class="faq-a">多数情况与本地网络环境、中间节点波动有关。可尝试切换网络或刷新页面，若持续异常可稍后再试。</div>
+        </div>
+        <div class="faq-item">
+            <div class="faq-q">需要注册或登录吗？</div>
+            <div class="faq-a">根据具体功能板块不同，部分内容可直接浏览，某些操作可能需要验证身份。按照页面提示完成即可。</div>
+        </div>
+        <div class="faq-item">
+            <div class="faq-q">如何确保访问的是正确站点？</div>
+            <div class="faq-a">建议通过可信的渠道获取地址，或直接使用已保存的书签。注意核对域名拼写，避免进入相似名称的站点。</div>
+        </div>
+        <div class="faq-item">
+            <div class="faq-q">手机和电脑体验有区别吗？</div>
+            <div class="faq-a">界面会自适应屏幕尺寸，核心功能一致。部分操作在电脑上查看更清晰，移动端则更便捷，可根据习惯选择。</div>
+        </div>
+    </section>
+
+    <!-- 提示区块 -->
+    <div class="notice-box">
+        <strong style="display: block; margin-bottom: 0.2rem;">访问提醒</strong>
+        <ul>
+            <li>建议使用主流浏览器（Chrome、Edge、Safari 等）并保持更新。</li>
+            <li>避免在公共或不可信的 Wi-Fi 下进行敏感操作。</li>
+            <li>如果遇到页面显示异常，先尝试清除浏览器缓存或开启无痕模式。</li>
+            <li>任何要求你提供额外个人信息的弹窗或链接请保持警惕。</li>
+        </ul>
+    </div>
+
+    <!-- 底部 -->
+    <div class="footer-note">
+        本页面为轻量指引，不构成任何服务承诺。具体功能与规则以实际页面为准。
+    </div>
+
+</div>
+</body>
+</html>

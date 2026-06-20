@@ -1,0 +1,260 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>德州扑克下载 · 游戏指南与资源</title>
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+        body {
+            background-color: #f8f5f0; /* 米白基调 */
+            font-family: 'Georgia', 'Noto Serif SC', 'Times New Roman', serif;
+            color: #2e2b27;
+            line-height: 1.7;
+            padding: 2rem 1.5rem;
+        }
+        .page {
+            max-width: 920px;
+            margin: 0 auto;
+            background-color: #fffcf8;
+            border-radius: 32px;
+            box-shadow: 0 8px 24px rgba(0, 0, 0, 0.04);
+            padding: 2.5rem 2rem;
+        }
+        @media (min-width: 640px) {
+            .page {
+                padding: 3.5rem 3rem;
+            }
+        }
+
+        /* 主视觉 —— 克制且清晰 */
+        .hero {
+            margin-bottom: 3rem;
+            border-bottom: 1px solid #ede6db;
+            padding-bottom: 1.8rem;
+        }
+        .hero h1 {
+            font-size: 2.2rem;
+            font-weight: 500;
+            letter-spacing: -0.02em;
+            color: #3a322c;
+            margin-bottom: 0.5rem;
+        }
+        .hero .sub {
+            font-size: 1rem;
+            color: #7a7068;
+            font-style: italic;
+            margin-top: 0.25rem;
+        }
+
+        /* 信息卡片网格 —— 用途卡片 + 适合人群 */
+        .card-grid {
+            display: grid;
+            grid-template-columns: 1fr;
+            gap: 1.6rem;
+            margin: 2.4rem 0;
+        }
+        @media (min-width: 600px) {
+            .card-grid {
+                grid-template-columns: 1fr 1fr;
+            }
+        }
+
+        .card {
+            background-color: #ffffff;
+            border: 1px solid #e8e0d6;
+            border-radius: 24px;
+            padding: 1.6rem 1.4rem;
+            box-shadow: 0 4px 10px rgba(0,0,0,0.02);
+            transition: box-shadow 0.2s;
+        }
+        .card:hover {
+            box-shadow: 0 6px 16px rgba(0,0,0,0.06);
+        }
+        .card h3 {
+            font-size: 1.2rem;
+            font-weight: 500;
+            color: #4c3f37;
+            border-left: 4px solid #c4b5a5;
+            padding-left: 0.6rem;
+            margin-bottom: 0.9rem;
+        }
+        .card p {
+            font-size: 0.95rem;
+            color: #4d443d;
+        }
+        .card .tag {
+            display: inline-block;
+            background: #ede6db;
+            padding: 0.2rem 0.8rem;
+            border-radius: 40px;
+            font-size: 0.8rem;
+            color: #4c3f37;
+            margin-top: 0.5rem;
+        }
+
+        /* 提示框 / 引用块 */
+        .insight-box {
+            background: #f2ede6;
+            border-left: 6px solid #b9a99a;
+            padding: 1.4rem 1.6rem;
+            border-radius: 16px;
+            margin: 2rem 0;
+            font-size: 0.95rem;
+            color: #3f3832;
+        }
+        .insight-box strong {
+            font-weight: 600;
+            color: #2b241f;
+        }
+
+        /* 自然链接段落 */
+        .link-paragraph {
+            background: #fffcf8;
+            padding: 1.2rem 0 0.4rem 0;
+            border-top: 1px solid #ece3da;
+            margin-top: 2.2rem;
+        }
+        .link-paragraph a {
+            color: #8b6f58;
+            text-decoration: none;
+            border-bottom: 1px solid #dacfc4;
+            font-weight: 500;
+            transition: border-color 0.15s, color 0.15s;
+        }
+        .link-paragraph a:hover {
+            color: #4f3a2b;
+            border-bottom-color: #4f3a2b;
+        }
+
+        /* FAQ 摘要 */
+        .faq-summary {
+            margin: 2.6rem 0 1rem;
+            border-top: 1px dashed #ddd5cb;
+            padding-top: 1.8rem;
+        }
+        .faq-summary h2 {
+            font-size: 1.3rem;
+            font-weight: 500;
+            color: #3d342e;
+            margin-bottom: 1rem;
+        }
+        .faq-item {
+            padding: 0.8rem 0;
+            border-bottom: 1px solid #ede6db;
+        }
+        .faq-item:last-of-type {
+            border-bottom: none;
+        }
+        .faq-question {
+            font-weight: 600;
+            color: #4c3f37;
+        }
+        .faq-answer {
+            margin-top: 0.3rem;
+            color: #5a5048;
+            font-size: 0.95rem;
+        }
+
+        /* 响应式微调 */
+        @media (max-width: 480px) {
+            .hero h1 {
+                font-size: 1.8rem;
+            }
+            .page {
+                padding: 1.5rem 1.2rem;
+            }
+            .card {
+                padding: 1.2rem 1rem;
+            }
+        }
+        hr {
+            border: none;
+            border-top: 1px solid #e8dfd5;
+            margin: 1.8rem 0;
+        }
+    </style>
+</head>
+<body>
+<div class="page">
+
+    <!-- 主视觉 -->
+    <div class="hero">
+        <h1>德州扑克下载 · 识别与入门</h1>
+        <div class="sub">从规则到实战，一款游戏的理性入口</div>
+    </div>
+
+    <!-- 第一段：直接说明用途，自然引出卡片 -->
+    <p style="font-size:1.05rem; margin-bottom: 1.2rem;">
+        当你搜索“德州扑克下载”时，很可能并不是只想找一个安装文件，而是希望了解：
+        这个版本是否完整？是否有中文界面？是否适合朋友间对战？下面几张卡片可以帮助你快速判断。
+    </p>
+
+    <!-- 信息卡片网格：用途卡片 + 适合人群 -->
+    <div class="card-grid">
+        <div class="card">
+            <h3>📋 用途卡片</h3>
+            <p>主要面向休闲娱乐与策略练习。支持人机对战、局域网好友局，以及简单的翻前练习模式。无内购陷阱，无强制注册。</p>
+            <span class="tag">单机 / 联机</span>
+            <span class="tag">无广告弹窗</span>
+        </div>
+        <div class="card">
+            <h3>👥 适合人群</h3>
+            <p>德州扑克初学者、想离线练习的玩家、以及希望快速和朋友开一局的休闲群体。更侧重规则理解与手牌评估。</p>
+            <span class="tag">入门友好</span>
+            <span class="tag">聚会场景</span>
+        </div>
+    </div>
+
+    <!-- 承接段落 + 提示框（偏知识型） -->
+    <p style="margin-top: 1.2rem;">
+        不管是想学习底牌组合，还是体验翻牌后的决策，一个干净、可控的环境都能减少干扰。
+        很多玩家在尝试过几款产品后，会发现“功能精简”反而更有利于建立对概率和位置的直觉。
+    </p>
+
+    <div class="insight-box">
+        <strong>💡 一点观察</strong><br>
+        德州扑克的策略深度远大于“运气”。如果你希望从规则入手慢慢磨练，建议优先选择那些不刻意引导充值的下载源，
+        把注意力放在牌局本身的逻辑上。
+    </div>
+
+    <!-- 自然链接段落 —— 嵌入 “德州扑克下载” a标签，无诱导词 -->
+    <div class="link-paragraph">
+        <p>
+            如果你正在寻找一个稳定、纯净的版本，不妨直接通过 
+            <a href="https://download-texasholdem.com">德州扑克下载</a> 
+            获取最新安装包。该资源保持长期更新，适配 Windows 与 macOS，不含第三方捆绑。
+        </p>
+    </div>
+
+    <!-- FAQ 摘要 —— 增加信息层次 -->
+    <div class="faq-summary">
+        <h2>常见疑问 · 快速概览</h2>
+        <div class="faq-item">
+            <div class="faq-question">❓ 这个版本是否支持中文？</div>
+            <div class="faq-answer">完全支持简体中文界面，牌桌文字、按钮以及教程部分均做了本地化处理。</div>
+        </div>
+        <div class="faq-item">
+            <div class="faq-question">❓ 必须联网才能玩吗？</div>
+            <div class="faq-answer">不必须。单机模式下可自由创建牌局，与 AI 对战；联机模式需要局域网或互联网。</div>
+        </div>
+        <div class="faq-item">
+            <div class="faq-question">❓ 与在线扑克房有什么区别？</div>
+            <div class="faq-answer">本版本不涉及真实货币，无排行榜压力，更适合策略练习与朋友娱乐。</div>
+        </div>
+    </div>
+
+    <!-- 结尾段落，风格节制 -->
+    <hr>
+    <p style="font-size:0.9rem; color:#6b6058; text-align:center; letter-spacing:0.02em;">
+        无论你是第一次接触德州扑克，还是希望回归纯粹的游戏体验，<br>
+        一个值得信赖的下载来源会让起步更顺畅。
+    </p>
+
+</div>
+</body>
+</html>
